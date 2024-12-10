@@ -1,10 +1,8 @@
 package agenda;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Repetition {
     public ChronoUnit getFrequency() {
@@ -20,6 +18,8 @@ public class Repetition {
      * </UL>
      */
     private final ChronoUnit myFrequency;
+    private final ArrayList<LocalDate> exceptions = new ArrayList<>();
+    private Termination termination;
 
     public Repetition(ChronoUnit myFrequency) {
         this.myFrequency = myFrequency;
@@ -30,8 +30,7 @@ public class Repetition {
      * @param date un date à laquelle l'événement ne doit pas se répéter
      */
     public void addException(LocalDate date) {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        exceptions.add(date);
     }
 
     /**
@@ -39,8 +38,25 @@ public class Repetition {
      * @param termination la terminaison de la répétition
      */
     public void setTermination(Termination termination) {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
-
+        this.termination = termination;
     }
+
+    /**
+     * Vérifie si une date est marquée comme exception
+     * @param date une date à vérifier
+     * @return true si la date est une exception, false sinon
+     */
+    public boolean isException(LocalDate date) {
+        return exceptions.contains(date);
+    }
+
+    /**
+     * Retourne la terminaison associée à la répétition
+     * @return la terminaison de la répétition (ou null si aucune n'est définie)
+     */
+    public Termination getTermination() {
+        return termination;
+    }
+
+    
 }

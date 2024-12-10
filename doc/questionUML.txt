@@ -1,2 +1,33 @@
 Ecrire ici votre réponse à la question UML.
 
+**** Premier diagramme: ****
+Ce diagramme est utile pour les agendas compliqués.
+Avantages:
+
+    -Beaucoup de fonctionnalités : Il gère les événements simples et répétitifs, avec des options comme des exceptions ou une date de fin.
+    -Très précis : Il permet de gérer des cas complexes, comme des répétitions limitées ou des exceptions pour certains jours.
+    -Bien organisé : Chaque partie des événements (répétitions, exceptions, etc.) est séparée, ce qui rend le code plus facile à modifier.
+
+Inconvénients :
+
+    -Difficile à utiliser : Ce diagramme est compliqué et demande beaucoup de travail, surtout pour des besoins simples.
+    -Peut être trop : Si on n’a pas besoin de toutes les options, cela rend le système plus lourd et plus difficile à comprendre.
+
+
+_________________________________________________
+**** Deuxième diagramme : ****
+
+Ce diagramme est idéal pour les agendas faciles.
+Avantages:
+
+    -Facile à comprendre : Il a moins de classes et de relations, donc il est plus simple à utiliser.
+    -Adapté aux répétitions : Si les événements se répètent souvent, ce modèle est parfait.
+    -Code léger : Il demande moins de détails, donc il est rapide à écrire.
+
+Inconvénients :
+
+    -Moins de possibilités : Il ne gère pas bien les événements complexes avec des exceptions ou des dates de fin.
+    -Moins clair : Il ne distingue pas bien les différents types d’événements, ce qui peut poser des problèmes si on veut ajouter des options plus tard.
+
+
+
